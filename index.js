@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql");
 const app = express();
+require("dotenv").config();
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
@@ -77,7 +79,7 @@ app.get("/", (req, res) => {
   res.send("grocery-shop");
 });
 
-app.listen(3306, () => {
+app.listen(port, () => {
   console.log("grocery-shop connected");
 });
 
