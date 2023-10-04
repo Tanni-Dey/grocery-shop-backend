@@ -8,10 +8,10 @@ app.use(cors());
 
 //database connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "groceryshop",
+  host: "sql12.freesqldatabase.com",
+  user: "sql12651031",
+  password: "RA2QwK2Kh6",
+  database: "sql12651031",
 });
 
 // ---------- CURD api start--------------
@@ -77,6 +77,8 @@ app.get("/", (req, res) => {
   res.send("grocery-shop");
 });
 
-app.listen(5000, () => {
+app.listen(3306, () => {
   console.log("grocery-shop connected");
 });
+
+module.exports = app;
