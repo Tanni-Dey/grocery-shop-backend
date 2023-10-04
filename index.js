@@ -82,5 +82,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log("grocery-shop connected");
 });
-
-module.exports = app;
